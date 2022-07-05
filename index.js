@@ -57,9 +57,10 @@ let request = async () => {
         })
         profList.classList.remove('hidden')
         console.log(e.target.value)
-
+        
         
         // Spells
+        // example: https://www.dnd5eapi.co/api/classes/bard/spells
         req = await fetch(`https://www.dnd5eapi.co/api/classes/${e.target.value.toLowerCase()}/spells`)
         res = await req.json()
         if (res.count !== 0) {
@@ -78,18 +79,15 @@ let request = async () => {
         } else {
             spellList.classList.add('hidden')
             spellHeader.classList.add('hidden')
+
+            // future functionality: get spells for each class, store spells as objects
+            // use individual spell pages to set each spell level
+            // display spell levels in different lists based on level
     }
     })
     
-    // Task 1. 
-    // 1.1 Need to query the JSON database for spells
-    // 1.2 Need to limit which spells show based on class (need to see
-    // how this is organized in the JSON)
-    // 1.3 Need to append the spells to a UI element
+
     
-    // Begin with the most basic form: show all the spells all the time
-    
-    // example: https://www.dnd5eapi.co/api/classes/bard/spells
 
 
 }
