@@ -17,6 +17,12 @@ const portraitMap = {
     'warlock': '716/400/512/c3warlockintro.png'
 }
 
+let defaultOption = document.createElement('option')
+defaultOption.setAttribute('value', 'default')
+defaultOption.setAttribute('innerText', Select a Class)
+defaultOption.setAttribute('selected', 'true')
+classSelector.append(defaultOption)
+
 let request = async () => {
     // initiate request to dnd server
     let req = await fetch('https://www.dnd5eapi.co/api/classes')
@@ -28,6 +34,7 @@ let request = async () => {
         option.innerText = char.name
         classSelector.append(option)
     })
+    
     
     classSelector.addEventListener('change', async (e) => {
         document.getElementById('selected-class').innerText = e.target.value
@@ -47,6 +54,15 @@ let request = async () => {
     })
 }
 
-
 // the request function will now automatically run when the page loads
+
+
+// 1. List out the spells available to each class in DnD according to the class the user has currently selected
+// 2. Allow the user to name their character in DnD project
+// 3. Allow the user to create multiple characters in DnD project
+
+// 1. Is 
+
 request()
+
+//
