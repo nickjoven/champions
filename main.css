@@ -11,3 +11,12 @@ body {
     width: 400px;
     position: relative;
 }
+
+
+
+#spell-list {
+    float: right;
+    columns: 5;
+    -moz-columns: 5;
+    -webkit-columns: 5;
+}
